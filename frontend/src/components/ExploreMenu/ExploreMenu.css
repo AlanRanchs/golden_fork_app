@@ -5,13 +5,14 @@
 }
 
 .explore-menu h1 {
-    color: #262626;
+    color: var(--text-color);
     font-weight: 500;
 }
 
 .explore-menu-text {
     max-width: 60%;
-    color: #808080;
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 .explore-menu-list {
@@ -38,7 +39,8 @@
 
 .explore-menu-list-item p{
     margin-top: 10px;
-    color: #747474;
+    color: var(--text-color);
+    opacity: 0.8;
     font-size: max(1.4vw, 16px);
     cursor: pointer;
 }
@@ -46,7 +48,7 @@
 .explore-menu hr{
     margin: 10px 0px;
     height: 2px;
-    background-color: #e2e2e2;
+    background-color: var(--border-color);
     border: none;
 }
 
