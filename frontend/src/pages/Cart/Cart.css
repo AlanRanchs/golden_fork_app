@@ -5,19 +5,20 @@
     display:grid;
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
-    color: grey;
+    color: var(--text-color);
+    opacity: 0.7;
     font-size: max(1vw, 12px);
 }
 .cart-items-item{
     margin: 10px 0px;
-    color: black;
+    color: var(--text-color);
 }
 .cart-items-item img{
     width: 50px;
 }
 .cart hr{
     height: 1px;
-    background-color: #e2e2e2;
+    background-color: var(--border-color);
     border: none;
 }
 .cart-items-item .cross{
@@ -38,7 +39,7 @@
 .cart-total-details{
     display: flex;
     justify-content: space-between;
-    color: #555;
+    color: var(--text-color);
 }
 .cart-total hr{
     margin: 10px 0px;
@@ -56,14 +57,15 @@
     flex: 1;
 }
 .cart-promocode p{
-    color: #555;
+    color: var(--text-color);
 }
 .cart-promocode-input{
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eaeaea;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 .cart-promocode-input input{
@@ -71,6 +73,7 @@
     border: none;
     outline: none;
     padding-left: 10px;
+    color: var(--text-color);
 }   
 .cart-promocode-input button{
     width: max(10vw,150px);

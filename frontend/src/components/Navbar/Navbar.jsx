@@ -3,12 +3,15 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import { useNavigate } from "react-router-dom";
+import Switch from "../Switch/Switch";
 
 export const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Menú");
 
   const {getTotalCartAmount, token, setToken} = useContext(StoreContext);
+  const {theme, toggleTheme} = useContext(ThemeContext);
 
   const navigate = useNavigate();
 
@@ -20,7 +23,13 @@ export const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className="navbar">
-      <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
+      <Link to='/'>
+        <img 
+          src={theme === 'dark' ? assets.logo_footer : assets.logo} 
+          alt="" 
+          className="logo" 
+        />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
@@ -52,6 +61,10 @@ export const Navbar = ({ setShowLogin }) => {
         </a>
       </ul>
       <div className="navbar-right">
+        <Switch 
+          checked={theme === 'dark'} 
+          onChange={toggleTheme}
+        />
         <img src={assets.search_icon} alt="" />
         <div className="navbar-search-icon">
           <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
