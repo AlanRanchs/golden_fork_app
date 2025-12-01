@@ -4,6 +4,7 @@ import { connectDB } from './config/db.js';
 import foodRouter from './routers/foodRoute.js';
 import userRouter from './routers/userRoute.js';
 import 'dotenv/config';
+import cartRouter from './routers/cartRoute.js';
 
 //app config 
 const app = express();
@@ -20,6 +21,7 @@ connectDB();
 app.use('/api/food', foodRouter);
 app.use("/images", express.static("uploads")) // servir imagenes estaticas desde la carpeta uploads
 app.use('/api/user', userRouter);
+app.use('/api/cart', cartRouter); // router del carrito
 
 app.get("/",(req,res)=> {
     res.send("API Working")
