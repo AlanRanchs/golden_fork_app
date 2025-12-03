@@ -74,4 +74,38 @@ const verifyOrder = async (req, res) => {
     }
 }
 
-export { placeOrder, verifyOrder };
+// ordenes de usuario para el frontend
+const userOrders = async (req, res) => {
+    try {
+        const orders = await orderModel.find({userId: req.body.userId});
+        res.json({success:true, data:orders});
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message: "Error al obtener las órdenes del usuario"});
+    }
+}
+
+// Listar todas las órdenes (para admin)
+const listOrders = async (req, res) => {
+    try {
+        const orders = await orderModel.find({});
+        res.json({success:true, data:orders});
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message: "Error al obtener las órdenes"});
+    }
+}
+
+// Api para actualizar el estado de la orden (preparando, enviado, entregado) - para admin
+
+const updateStatus = async (req, res) => {
+    try {
+        await orderModel.findByIdAndUpdate(req.body.orderId, {status: req.body.status});
+        res.json({success:true, message: "Estado de la orden actualizado"});
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message: "Error al actualizar el estado de la orden"});
+    }
+}
+
+export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus };
