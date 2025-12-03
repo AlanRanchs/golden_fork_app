@@ -39,7 +39,7 @@ const removeFromCart = async (req, res) => {
     }
 }
 
-// fetch user cart data
+// Traer datos del carrito
 const getCart = async (req, res) => {
     try {
         let userData = await userModel.findById(req.body.userId);
