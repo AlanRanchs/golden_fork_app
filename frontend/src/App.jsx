@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home/home";
 import { Cart } from "./pages/Cart/Cart";
 import { PlaceOrder } from "./pages/PlaceOrder/PlaceOrder";
+import { Verify } from "./pages/Verify/Verify";
 import "./App.css";
 import { Footer } from "./components/Footer/Footer";
 import { LoginPopup } from "./components/LoginPopup/LoginPopup";
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
+          <Route path='/verify' element={<Verify />} />
         </Routes>
       </div>
       <Footer />

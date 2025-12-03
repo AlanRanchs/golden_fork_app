@@ -5,6 +5,7 @@ import foodRouter from './routers/foodRoute.js';
 import userRouter from './routers/userRoute.js';
 import 'dotenv/config';
 import cartRouter from './routers/cartRoute.js';
+import orderRouter from './routers/orderRoute.js';
 
 //app config 
 const app = express();
@@ -22,6 +23,8 @@ app.use('/api/food', foodRouter);
 app.use("/images", express.static("uploads")) // servir imagenes estaticas desde la carpeta uploads
 app.use('/api/user', userRouter);
 app.use('/api/cart', cartRouter); // router del carrito
+
+app.use('/api/order', orderRouter); // router de pedidos
 
 app.get("/",(req,res)=> {
     res.send("API Working")
