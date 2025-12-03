@@ -33,6 +33,14 @@
     color: #454545;
 }
 
+body.dark .my-orders-order {
+    color: #e5e5e5;
+}
+
+body.dark .my-orders-order p b {
+    color: #e5e5e5;
+}
+
 .my-orders-order button{
     border: none;
     padding: 8px 12px;
