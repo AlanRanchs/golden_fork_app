@@ -1,0 +1,262 @@
+/* Personalizaciones para Driver.js - Golden Fork Theme */
+
+/* Overlay oscuro personalizado */
+.driver-overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: none;
+}
+
+/* Popover principal */
+.driver-popover {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  max-width: 400px !important;
+  padding: 0 !important;
+}
+
+/* Header del popover */
+.driver-popover-title {
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-color) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding: 20px 20px 15px 20px !important;
+  border-radius: 12px 12px 0 0 !important;
+  border-bottom: 2px solid var(--accent-color) !important;
+  margin: 0 !important;
+}
+
+/* Descripción del popover */
+.driver-popover-description {
+  color: var(--text-color) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  padding: 20px !important;
+}
+
+.driver-popover-description ul,
+.driver-popover-description ol {
+  color: var(--text-color) !important;
+}
+
+.driver-popover-description li {
+  margin: 5px 0 !important;
+  color: var(--text-color) !important;
+}
+
+.driver-popover-description strong {
+  color: var(--accent-color) !important;
+}
+
+/* Flecha del popover */
+.driver-popover-arrow {
+  border-color: var(--card-bg) !important;
+}
+
+.driver-popover-arrow-side-top.driver-popover-arrow {
+  border-top-color: var(--card-bg) !important;
+}
+
+.driver-popover-arrow-side-bottom.driver-popover-arrow {
+  border-bottom-color: var(--navbar-bg) !important;
+}
+
+.driver-popover-arrow-side-left.driver-popover-arrow {
+  border-left-color: var(--card-bg) !important;
+}
+
+.driver-popover-arrow-side-right.driver-popover-arrow {
+  border-right-color: var(--card-bg) !important;
+}
+
+/* Footer con botones */
+.driver-popover-footer {
+  background-color: var(--navbar-bg) !important;
+  padding: 15px 20px !important;
+  border-radius: 0 0 12px 12px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-top: 1px solid var(--border-color, #e0e0e0) !important;
+}
+
+/* Botones */
+.driver-popover-btn {
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border: none !important;
+}
+
+/* Botón Next/Done */
+.driver-popover-next-btn {
+  background-color: var(--accent-color, goldenrod) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(218, 165, 32, 0.3) !important;
+}
+
+.driver-popover-next-btn:hover {
+  background-color: var(--accent-hover, #daa520) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4) !important;
+}
+
+/* Botón Previous */
+.driver-popover-prev-btn {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color, #ddd) !important;
+}
+
+.driver-popover-prev-btn:hover {
+  background-color: var(--hover-bg, rgba(0, 0, 0, 0.05)) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Botón Close */
+.driver-popover-close-btn {
+  background-color: transparent !important;
+  color: var(--text-secondary, #999) !important;
+  font-size: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  padding: 0 !important;
+  opacity: 0.7 !important;
+}
+
+.driver-popover-close-btn:hover {
+  opacity: 1 !important;
+  background-color: var(--hover-bg, rgba(0, 0, 0, 0.1)) !important;
+  transform: rotate(90deg) !important;
+}
+
+/* Texto de progreso */
+.driver-popover-progress-text {
+  color: var(--text-secondary, #999) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Elemento destacado (highlighted) */
+.driver-active-element {
+  border-radius: 8px !important;
+}
+
+/* Animación del spotlight */
+@keyframes driver-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(218, 165, 32, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(218, 165, 32, 0);
+  }
+}
+
+.driver-active-element {
+  animation: driver-pulse 2s infinite !important;
+}
+
+/* Responsive - Móvil */
+@media (max-width: 768px) {
+  .driver-popover {
+    max-width: 90vw !important;
+    margin: 10px !important;
+  }
+
+  .driver-popover-title {
+    font-size: 18px !important;
+    padding: 15px !important;
+  }
+
+  .driver-popover-description {
+    font-size: 14px !important;
+    padding: 15px !important;
+  }
+
+  .driver-popover-footer {
+    padding: 12px 15px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .driver-popover-btn {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+
+  .driver-popover-progress-text {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .driver-popover {
+    max-width: 95vw !important;
+  }
+
+  .driver-popover-title {
+    font-size: 16px !important;
+  }
+
+  .driver-popover-description {
+    font-size: 13px !important;
+  }
+
+  .driver-popover-description ul,
+  .driver-popover-description ol {
+    padding-left: 15px !important;
+  }
+}
+
+/* Mejoras de accesibilidad */
+.driver-popover:focus {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Soporte para tema oscuro */
+@media (prefers-color-scheme: dark) {
+  .driver-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+/* Animación de entrada del popover */
+.driver-popover {
+  animation: slideIn 0.3s ease-out !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para listas en descripción */
+.driver-popover-description ul li::marker,
+.driver-popover-description ol li::marker {
+  color: var(--accent-color) !important;
+}
+
+/* Efecto hover en todo el popover */
+.driver-popover {
+  transition: transform 0.2s ease !important;
+}

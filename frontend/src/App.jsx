@@ -9,16 +9,20 @@ import { MyOrders } from "./pages/MyOrders/MyOrders";
 import "./App.css";
 import { Footer } from "./components/Footer/Footer";
 import { LoginPopup } from "./components/LoginPopup/LoginPopup";
+import useTourGuide from "./components/TourGuide/TourGuide";
 
 const App = () => {
   
   const [showLogin, setShowLogin] = useState(false);
+  
+  // Inicializar el tour guiado
+  const { startTour } = useTourGuide();
 
   return (
     <>
     {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
       <div className='app'>
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar setShowLogin={setShowLogin} onStartTour={startTour} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
